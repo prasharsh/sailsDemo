@@ -1,0 +1,44 @@
+<style>
+  table,
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+
+<body>
+  <h1>Go, get your data!</h1>
+  <br />
+  <table>
+    <thread>
+      <tr>
+        <th>Job Name</th>
+        <th>Part Id</th>
+        <th>quantity</th>
+      </tr>
+    </thread>
+    <tbody>
+      <% parts.forEach(function(i){ %>
+      <tr>
+        <td><%= i.jobName %></td>
+        <td><%= i.partID %></td>
+        <td><%= i.qty %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+<br />
+<form action="/">
+  <button>Home</button>
+</form>
+<br />
+<form action="/addData">
+  <button>Add Data</button>
+</form>
+<br />
+<form action="/updateData">
+  <button>Update Data</button>
+</form>
